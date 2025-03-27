@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Intermediate & Advanced Interview Questions</title>
+    <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.9.2/dist/html2pdf.bundle.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-900">
+    <div class="container mx-auto p-5">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h1 class="text-2xl font-bold text-center mb-6">Node.js Intermediate & Advanced Interview Questions</h1>
+
+            <div id="content" class="space-y-6">
+                <!-- Intermediate Question 1 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">1. How do you use Sequelize to join two tables?</h2>
+                    <p>In Sequelize, you can perform a join using the <code>include</code> option. For example, when retrieving a user, you can include their associated posts using:</p>
+                    <pre><code>const users = await User.findAll({
+    include: {
+        model: Post,
+        attributes: ['title', 'content'],
+    },
+});</code></pre>
+                </div>
+
+                <!-- Advanced Question 2 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">2. What are Sequelize hooks and how can they be used?</h2>
+                    <p>Sequelize hooks are lifecycle methods that allow you to run functions before or after certain events like creating, updating, or deleting records. They are helpful for validations or logging purposes. Example:</p>
+                    <pre><code>User.beforeCreate((user, options) => {
+    user.name = user.name.toUpperCase(); // Capitalize name before creating
+});</code></pre>
+                </div>
+
+                <!-- Advanced Question 3 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">3. How do you handle pagination in Sequelize?</h2>
+                    <p>Pagination in Sequelize can be done by using the <code>limit</code> and <code>offset</code> options. Example:</p>
+                    <pre><code>const posts = await Post.findAll({
+    limit: 10, // Number of posts per page
+    offset: (page - 1) * 10, // Page number
+});</code></pre>
+                </div>
+            </div>
+
+            <div class="mt-6 flex justify-center">
+                <button id="download" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('download').addEventListener('click', function () {
+            var element = document.getElementById('content');
+            var options = {
+                filename: 'Nodejs_Intermediate_Advanced_Interview_Questions.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().from(element).set(options).save();
+        });
+    </script>
+    <a href="./interviewQuestions.html" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Nodejs Questions</a>
+</body>
+</html>
