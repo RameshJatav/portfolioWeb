@@ -1,1 +1,146 @@
-node js main 15 Interviews Q. & Ans.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Interview Questions</title>
+    <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.9.2/dist/html2pdf.bundle.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans text-gray-900">
+    <div class="container mx-auto p-5">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h1 class="text-2xl font-bold text-center mb-6">Node.js Interview Questions & Answers</h1>
+
+            <div id="content" class="space-y-6">
+                <!-- Question 1 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">1. What is Node.js?</h2>
+                    <p>Node.js is a runtime environment built on Chrome's V8 JavaScript engine. It allows you to run JavaScript code server-side, enabling developers to use JavaScript for both client-side and server-side development. It is designed for building scalable network applications, especially web servers and APIs.</p>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">2. What is the Event Loop in Node.js?</h2>
+                    <p>The event loop is a key concept in Node.js. Node.js is single-threaded, meaning it can handle one operation at a time. However, it can handle asynchronous operations (like reading files or handling HTTP requests) in the background without blocking the main thread. The event loop is responsible for managing these asynchronous tasks and ensures that non-blocking tasks are executed when they are completed.</p>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">3. What is the difference between synchronous and asynchronous code in Node.js?</h2>
+                    <p><strong>Synchronous code</strong>: Executes one operation at a time, blocking the next task until the current one is completed.<br>
+                    <strong>Asynchronous code</strong>: Executes operations in the background and doesn't block the execution of the next task. Node.js heavily uses asynchronous code to handle I/O operations, making it more scalable and efficient.</p>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">4. What are some important modules in Node.js?</h2>
+                    <p>Some of the core modules in Node.js include:<br>
+                    - <strong>HTTP</strong>: To create HTTP servers and clients.<br>
+                    - <strong>fs (File System)</strong>: To interact with the file system (read/write files).<br>
+                    - <strong>path</strong>: For working with file and directory paths.<br>
+                    - <strong>events</strong>: To handle events and event-driven programming.<br>
+                    - <strong>util</strong>: For utility functions.<br>
+                    - <strong>os</strong>: To get information about the operating system.</p>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">5. What is NPM (Node Package Manager)?</h2>
+                    <p>NPM is the default package manager for Node.js. It allows you to install, share, and manage dependencies (libraries and packages) in your Node.js projects. It provides access to a large ecosystem of open-source libraries that can be used in your applications.</p>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">6. What is a callback function in Node.js?</h2>
+                    <p>A callback function is a function passed as an argument to another function, which is executed after the completion of a certain operation. Node.js relies heavily on callback functions for handling asynchronous code. For example, in the <code>fs.readFile</code> method, a callback is provided to handle the data once the file is read.</p>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">7. What is the difference between <code>require</code> and <code>import</code> in Node.js?</h2>
+                    <p>- <strong><code>require</code></strong> is the older way of importing modules in Node.js and is used in CommonJS modules.<br>
+                    - <strong><code>import</code></strong> is part of ECMAScript modules (ESM) and allows you to import modules using the <code>import</code> keyword. As of Node.js v14 and above, you can use <code>import</code> if your code is using ESM.</p>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">8. What is a Promise in Node.js?</h2>
+                    <p>A Promise is an object that represents the eventual completion or failure of an asynchronous operation. It provides a cleaner way to handle asynchronous code, avoiding callback hell. A Promise has three states:<br>
+                    - <strong>Pending</strong>: The operation is still ongoing.<br>
+                    - <strong>Resolved (Fulfilled)</strong>: The operation completed successfully.<br>
+                    - <strong>Rejected</strong>: The operation failed.<br>
+                    You can handle the results using <code>.then()</code> for success or <code>.catch()</code> for failure.</p>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">9. What is the difference between <code>setTimeout()</code> and <code>setInterval()</code> in Node.js?</h2>
+                    <p>- <strong><code>setTimeout()</code></strong>: Executes a function once after a specified delay.<br>
+                    - <strong><code>setInterval()</code></strong>: Executes a function repeatedly at a specified interval.</p>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">10. What is the purpose of the <code>buffer</code> module in Node.js?</h2>
+                    <p>The <code>buffer</code> module in Node.js is used to handle binary data directly in memory, outside the JavaScript string encoding. Buffers are useful when working with I/O operations, like reading from files or dealing with network streams.</p>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">11. Explain the difference between <code>process.nextTick()</code> and <code>setImmediate()</code> in Node.js.</h2>
+                    <p>- <strong><code>process.nextTick()</code></strong>: Defers the execution of a function to the next iteration of the event loop but before any I/O tasks are executed.<br>
+                    - <strong><code>setImmediate()</code></strong>: Defers the execution of a function until the next cycle of the event loop, after the current event loop has completed.</p>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">12. What is the use of the <code>cluster</code> module in Node.js?</h2>
+                    <p>The <code>cluster</code> module allows you to create child processes that run simultaneously and share the same server port. This helps in utilizing multi-core systems efficiently. It allows Node.js to scale and handle more requests by distributing the load among multiple processes.</p>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">13. What is CORS, and how do you handle it in Node.js?</h2>
+                    <p>CORS (Cross-Origin Resource Sharing) is a mechanism that allows web browsers to make requests to domains other than the one from which the web page was served. In Node.js, you can handle CORS by using the <code>cors</code> package, which is commonly added to the server as middleware to allow or restrict cross-origin requests.</p>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">14. Explain middleware in Express.js.</h2>
+                    <p>Middleware functions in Express.js are functions that have access to the request, response, and the next middleware function in the application's request-response cycle. Middleware is often used to modify the request/response objects, log information, handle authentication, or even handle errors.</p>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+                    <h2 class="font-semibold text-xl mb-2">15. What is the role of the <code>req</code> and <code>res</code> objects in Express.js?</h2>
+                    <p>- <strong><code>req</code> (Request object)</strong>: Represents the HTTP request and contains information about the request such as query parameters, body, and headers.<br>
+                    - <strong><code>res</code> (Response object)</strong>: Represents the HTTP response and is used to send a response back to the client. Methods like <code>res.send()</code>, <code>res.json()</code>, and <code>res.status()</code> are commonly used to send responses.</p>
+                </div>
+
+            </div>
+
+            <div class="mt-6 flex justify-center">
+                <button id="download" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('download').addEventListener('click', function () {
+            var element = document.getElementById('content');
+            var options = {
+                filename: 'Nodejs_Interview_Questions.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().from(element).set(options).save();
+        });
+    </script>
+</body>
+
+</html>
+
