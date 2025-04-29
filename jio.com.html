@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jio Career Training Business Plan</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Watermark Style */
+    #plan-content::before {
+      content: "RAMESH JATAV\nJio_Training_Business_Plan";
+      white-space: pre;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+      font-size: 6vw;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.03); /* Very light */
+      text-align: center;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    #plan-content {
+      position: relative;
+      z-index: 1;
+      background-color: white;
+    }
+
+    @media (max-width: 640px) {
+      #plan-content::before {
+        font-size: 9vw;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="max-w-4xl mx-auto my-6 p-4 sm:p-6 bg-white shadow-md rounded-md relative" id="plan-content">
+    <h1 class="text-2xl font-bold text-center text-indigo-700 mb-4">📘 Jio Career Training & Earning Center</h1>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">🎯 Goal:</h2>
+      <p>Start a zero-investment, work-from-home training and onboarding center for the Jio Customer Associate program. Help others join and earn while you generate income through training fees, referral bonuses, and support services.</p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">📦 Step-by-Step Business Plan:</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>Step 1:</strong> Start from home. Use WhatsApp or Zoom to train. No office needed.</li>
+        <li><strong>Step 2:</strong> Join the JCA program to gain experience yourself.</li>
+        <li><strong>Step 3:</strong> Promote locally via WhatsApp, Facebook, audio posts.</li>
+        <li><strong>Step 4:</strong> Charge ₹299–₹499 for onboarding/training support.</li>
+        <li><strong>Step 5:</strong> Use Jio's referral (if allowed) for bonus income.</li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">🧠 Optional Expansion:</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Create a WhatsApp support group with a small monthly fee.</li>
+        <li>Make YouTube videos for training and promotion.</li>
+        <li>Train local mini-partners to scale faster.</li>
+        <li>Use family member accounts legally to increase coverage.</li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">📈 Earning Estimate (2 Months):</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Training Fees (50 × ₹399) = ₹19,950</li>
+        <li>WhatsApp Support Group (20 × ₹149) = ₹2,980</li>
+        <li>JCA Self Earning = ₹8,000–₹12,000</li>
+        <li><strong>Total Estimated Income = ₹30,000–₹35,000/month</strong></li>
+      </ul>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">✅ Why This Plan Works:</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>No office rent</li>
+        <li>No stock or physical product</li>
+        <li>No team management headache</li>
+        <li>Legal, low-risk, and 100% scalable</li>
+        <li>Complete control remains with you</li>
+      </ul>
+    </section>
+
+    <div class="text-center mt-8">
+      <button onclick="downloadPDF()" class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700">
+        📥 Download as PDF
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById("plan-content");
+      const opt = {
+        margin: 0,
+        filename: 'Jio_Training_Business_Plan.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
+</body>
+</html>
