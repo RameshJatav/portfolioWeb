@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Ramesh Jatav, backend developer, Ramesh, kairwari, kairwadi, malakhera, malakheda, Alwar, who is Ramesh Jatav, Ramesh Jatav kon hai, web developer, Node.js, MongoDB, MySQL">
+
+    <title>Ramesh Jatav | Backend Developer | Node.js | Alwar</title>
+    <link rel="icon" type="image/x-icon" href="logo_myportfolio.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta property="og:url" content="https://portfolio-web-six-mu.vercel.app/">
+
+</head>
+
+<body class="bg-gray-900 font-sans leading-relaxed text-gray-800">
+
+    <div class="max-w-5xl mx-auto py-10 px-5">
+        <h1
+            class="text-4xl font-bold mb-6 text-center text-yellow-500 border-2 shadow-md rounded-lg p-5 hover:shadow-lg transition">
+            Node.js Interview Quick Guide with Sort</h1>
+
+        <div id="topics" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </div>
+
+    <script>
+        const topics = [
+            { title: "Node.js", desc: "JavaScript runtime built on Chrome's V8 engine for building fast, scalable apps." },
+            { title: "Event Loop", desc: "Mechanism that handles async operations in a non-blocking way." },
+            { title: "Non-blocking I/O", desc: "Allows other operations to continue without waiting for I/O to complete." },
+            { title: "NPM", desc: "Tool to install and manage packages/libraries in Node.js." },
+            { title: "Modules", desc: "Reusable chunks of code; 'require()' is used to import them." },
+            { title: "CommonJS", desc: "Module system used by Node.js (uses 'require' and 'module.exports')." },
+            { title: "Callback", desc: "Function passed as argument, called after async task completes." },
+            { title: "Promises", desc: "Handle async code in a cleaner way than callbacks." },
+            { title: "async/await", desc: "Syntactic sugar for Promises, makes async code look synchronous." },
+            { title: "Express.js", desc: "Minimal web framework for Node.js used to build APIs and web apps." },
+            { title: "Middleware", desc: "Functions that run during request-response cycle (e.g., logging, auth)." },
+            { title: "REST API", desc: "API style using HTTP methods like GET, POST, PUT, DELETE." },
+            { title: "HTTP Module", desc: "Core Node.js module to create server and handle HTTP requests." },
+            { title: "File System (fs)", desc: "Used to read/write files asynchronously/synchronously." },
+            { title: "Streams", desc: "Handle data chunk by chunk (e.g., file uploads, large file reads)." },
+            { title: "Buffer", desc: "Temporary storage for binary data." },
+            { title: "Cluster Module", desc: "Helps create child processes to handle load (multi-core support)." },
+            { title: "Process Object", desc: "Gives info and control over current Node process (e.g., 'process.env')." },
+            { title: "Environment Variables", desc: "Configuration values stored outside the code." },
+            { title: "package.json", desc: "Metadata about project and dependencies." }
+        ];
+
+        const container = document.getElementById("topics");
+
+        topics.forEach(topic => {
+            const card = document.createElement("div");
+            card.className = "bg-black shadow-md rounded-lg p-5 hover:shadow-lg transition";
+
+            card.innerHTML = `
+        <h2 class="text-xl font-semibold text-blue-700 mb-2">${topic.title}</h2>
+        <p class="text-gray-100">${topic.desc}</p>
+      `;
+
+            container.appendChild(card);
+        });
+    </script>
+
+</body>
+
+</html>
