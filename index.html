@@ -1,285 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ramesh Jatav - Portfolio, Backend Developer with experience in Node.js, MySQL, MongoDB, and more.">
-    <meta name="keywords" content="Ramesh Jatav, backend developer, Ramesh, kairwari, kairwadi, malakhera, malakheda, Alwar, who is Ramesh Jatav, Ramesh Jatav kon hai, web developer, Node.js, MongoDB, MySQL">
+    
+    <title>Ramesh Jatav | Expert Backend Developer & IT Consultant | Alwar</title>
+    <meta name="description" content="Portfolio of Ramesh Jatav - Senior Backend Developer specializing in Node.js, SAP Operations, and Full-stack IT Solutions. Founder of AmiTech Solutions.">
+    <meta name="keywords" content="Ramesh Jatav, AmiTech Solutions, KashishIndia Pvt Ltd, Backend Developer Alwar, Node.js Expert, SAP Specialist, School Management System, IT Company Alwar">
     <meta name="author" content="Ramesh Jatav">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Ramesh Jatav - Portfolio">
-    <meta property="og:description" content="Portfolio of Ramesh Jatav, showcasing skills in backend development, Node.js, MongoDB, MySQL, and more.">
-    <meta property="og:image" content="logo_myportfolio.png">
-    <meta name="google-site-verification" content="UprgvdYDklDbr_IUCL3jP0JUpTC68NbQDnQ-0gVLJeA" />
-    
-    <meta property="og:url" content="https://portfolio-web-six-mu.vercel.app/">
-    <meta property="og:url" content="https://rameshjatav.github.io/portfolioWeb/">
 
-    
-    <meta name="google-site-verification" content="LRbs93k_MN7KvSNu9nxVRp1nyRPtiGt9CN94ier7qek" />
-    <title>Ramesh Jatav | Backend Developer | Node.js | Alwar</title>
-    <link rel="icon" type="image/x-icon" href="logo_myportfolio.png">
+    <link rel="canonical" href="https://portfolio-web-six-mu.vercel.app/">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #4f46e5, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 font-sans leading-normal tracking-normal pt-24">
-<header class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium text-sm px-5 py-1.5 text-center fixed top-0 left-0 w-full z-10">
-    <div class="container mx-auto flex justify-between items-center">
-        <img src="./logo_myportfolio.png" alt="" class="w-20 py-0 mt-0"> <!-- Increased width for larger logo -->
-        <nav class="hidden md:flex space-x-6 text-2xl">
-            <a href="#about" class="hover:text-blue-300">About</a>
-            <a href="#skills" class="hover:text-blue-300">Skills</a>
-            <a href="#projects" class="hover:text-blue-300">Projects</a>
-            <a href="#contact" class="hover:text-blue-300">Contact</a>
-        </nav>
-        <a href="#" onclick="showPasswordForm()" class="hover:text-blue-300 underline text-2xl">My CV</a>
-    </div>
-    <div id="password-form" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex justify-center items-center">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-black">
-            <h2 class="text-lg font-semibold mb-4">Enter Captcha</h2>
-            <form onsubmit="return validateCaptcha(event)">
-                <div class="mb-4">
-                    <label for="captcha-input" class="block text-gray-700">Enter the text shown below:</label>
-                    <div class="flex items-center">
-                        <canvas id="captchaCanvas" class="border border-gray-300 rounded mr-4"></canvas>
-                        <button type="button" onclick="generateCaptcha()" class="text-blue-600 underline">Refresh</button>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-purple-100 selection:text-purple-700">
+
+    <header class="glass-nav fixed top-0 w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="gradient-bg p-2 rounded-lg shadow-lg">
+                    <span class="text-white font-bold">RJ</span>
+                </div>
+                <span class="text-xl font-black tracking-tight text-slate-800">AMITECH SOLUTIONS</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-bold text-xs tracking-widest text-slate-500 uppercase">
+                <a href="#about" class="hover:text-indigo-600 transition">About</a>
+                <a href="#experience" class="hover:text-indigo-600 transition">Experience</a>
+                <a href="#projects" class="hover:text-indigo-600 transition">Portfolio</a>
+                <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+            </nav>
+            <button onclick="showPasswordForm()" class="bg-slate-900 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-indigo-600 transition-all shadow-md">
+                DOWNLOAD CV
+            </button>
+        </div>
+    </header>
+
+    <section class="pt-48 pb-32 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-3/5 animate__animated animate__fadeInLeft">
+                <h2 class="text-indigo-600 font-bold mb-4 tracking-widest text-sm">BACKEND ARCHITECT & SAP SPECIALIST</h2>
+                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-none text-slate-900">
+                    Ramesh <br><span class="text-gradient">Jatav.</span>
+                </h1>
+                <p class="text-xl text-slate-500 mb-10 max-w-xl leading-relaxed">
+                    Founder of <strong>AmiTech Solutions</strong>. Expert in building scalable server-side systems, secure APIs, and managing enterprise SAP operations.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="bg-indigo-600 text-white px-10 py-4 rounded-2xl font-bold hover:bg-indigo-700 transition shadow-xl shadow-indigo-200">View Projects</a>
+                    <a href="#contact" class="border-2 border-slate-200 text-slate-800 px-10 py-4 rounded-2xl font-bold hover:border-indigo-600 hover:text-indigo-600 transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-2/5 mt-20 md:mt-0 animate__animated animate__zoomIn">
+                <div class="relative">
+                    <img src="./aboutimg.jpg" alt="Ramesh Jatav" class="w-80 h-96 md:w-[400px] md:h-[500px] object-cover rounded-[40px] shadow-2xl grayscale hover:grayscale-0 transition duration-700 mx-auto">
+                    <div class="absolute -bottom-10 -right-5 bg-white p-8 rounded-3xl shadow-2xl border border-slate-50 hidden md:block">
+                        <p class="text-4xl font-black text-indigo-600">2.5+</p>
+                        <p class="text-slate-400 font-bold text-xs uppercase">Years Experience</p>
                     </div>
                 </div>
-                <input type="text" id="captcha-input" class="border border-gray-300 p-2 rounded w-full mb-4" placeholder="Enter captcha here" required>
-                <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Submit</button>
-            </form>
-            <button onclick="closePasswordForm()" class="mt-4 text-purple-600 underline">Close</button>
+            </div>
         </div>
-    </div>
-</header>
+    </section>
 
-<script>
-    let captchaText = "";
+    <section id="experience" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-center mb-20">Work History</h2>
+            <div class="max-w-4xl mx-auto space-y-12">
+                
+                <div class="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 card-hover transition-all" data-aos="fade-up">
+                    <div class="md:w-1/4">
+                        <span class="text-indigo-600 font-black text-sm uppercase tracking-widest">Sep 2025 – Present</span>
+                        <h4 class="text-slate-400 font-bold text-xs mt-2">ASHOK LEYLAND</h4>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold mb-3">Data Entry Operations Specialist (SAP)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 italic">Vishwa Buses and Coaches Alwar</p>
+                        <p class="text-slate-500 leading-relaxed">
+                            Managing high-volume material vehicle invoices and GRN generation within the **SAP ERP** environment. Utilizing advanced Excel and Outlook for enterprise-level logistics and communication.
+                        </p>
+                    </div>
+                </div>
 
-    function showPasswordForm() {
-        generateCaptcha();
-        document.getElementById('password-form').classList.remove('hidden');
-    }
+                <div class="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 card-hover transition-all" data-aos="fade-up">
+                    <div class="md:w-1/4">
+                        <span class="text-pink-600 font-black text-sm uppercase tracking-widest">6-Month Contract</span>
+                        <h4 class="text-slate-400 font-bold text-xs mt-2">KASHISHINDIA PVT LTD</h4>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold mb-3">Backend Developer (Dedicated Project)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 font-bold">Project: Airtel Distributor Portal</p>
+                        <p class="text-slate-500 leading-relaxed">
+                            Exclusively hired for the end-to-end development of the **Airtel Distributor System**. Architected the backend using **Node.js** and **MySQL with Sequelize ORM**. Delivered a fully functional, secure portal for high-frequency distribution transactions.
+                        </p>
+                    </div>
+                </div>
 
-    function closePasswordForm() {
-        document.getElementById('password-form').classList.add('hidden');
-    }
+                <div class="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 card-hover transition-all" data-aos="fade-up">
+                    <div class="md:w-1/4">
+                        <span class="text-slate-400 font-black text-sm uppercase tracking-widest">Aug 2023 – Nov 2024</span>
+                        <h4 class="text-slate-400 font-bold text-xs mt-2">ZULU IT SOLUTIONS</h4>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold mb-3">Backend Developer</h3>
+                        <p class="text-slate-500 leading-relaxed">
+                            Built robust RESTful APIs with Node.js, JWT, and MongoDB/MySQL for diverse e-commerce and hotel management solutions.
+                        </p>
+                    </div>
+                </div>
 
-    function generateCaptcha() {
-        const canvas = document.getElementById('captchaCanvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = 150;
-        canvas.height = 50;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.font = '20px Arial';
-        ctx.fillStyle = '#333';
-        captchaText = Math.random().toString(36).substring(2, 8).toUpperCase();
-        ctx.fillText(captchaText, 10, 30);
-    }
-
-    function validateCaptcha(event) {
-        event.preventDefault();
-        const userInput = document.getElementById('captcha-input').value.trim().toUpperCase();
-        if (userInput === captchaText) {
-            sessionStorage.setItem('authenticated', 'true');
-            window.location.href = './portfolio_cv.html';
-        } else {
-            alert('Incorrect captcha. Please try again.');
-            generateCaptcha();
-        }
-    }
-
-    // Block direct access to portfolio_cv.html
-    if (window.location.pathname.endsWith('portfolio_cv.html') && sessionStorage.getItem('authenticated') !== 'true') {
-        alert('Access denied. Please authenticate first.');
-        window.location.href = './index.html';
-    }
-</script>
-
-<!-- About Section -->
-<section id="about" class="bg-white py-12">
-    <div class="container mx-auto text-center md:text-left flex flex-col md:flex-row items-center">
-        <!-- Your photo -->
-        <div class="mb-6 md:mb-0 md:w-1/3">
-            <img src="./aboutimg.jpg" alt="Ramesh Jatav" class="w-full mx-auto md:mx-0">
+            </div>
         </div>
+    </section>
 
-        <!-- About Text -->
-        <div class="md:w-2/3 text-center md:text-left pl-5">
-            <h2 class="text-2xl font-bold mb-4">About Me</h2>
-            <p class="text-gray-700">Hello! I'm Ramesh Jatav, a passionate web developer with a diploma in Advanced Web Development and hands-on experience in building dynamic web applications.</p>
-            <p class="text-gray-700">I have worked on various technologies like Node.js, MySQL, MongoDB, Tailwind CSS, and more to deliver functional and visually appealing projects.</p>
-        </div>
-    </div>
-</section>
-
-
-<!-- Skills Section -->
-<section id="skills" class="bg-gray-100 py-12">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Skills</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <section id="projects" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-center mb-6">Professional <span class="text-indigo-600">Portfolio</span></h2>
+            <p class="text-center text-slate-400 mb-20 max-w-2xl mx-auto font-medium">From corporate enterprise solutions to personal innovative projects.</p>
             
-            <!-- Node.js Skill -->
-            <div class="p-6 bg-white rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-                <i class="fab fa-node-js text-4xl text-green-600 mb-4"></i> <!-- Font Awesome Node.js icon -->
-                <h3 class="text-xl font-semibold text-gray-700">Node.js</h3>
-            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="group bg-slate-900 rounded-[40px] p-10 text-white card-hover transition-all" data-aos="zoom-in">
+                    <div class="h-full flex flex-col">
+                        <span class="text-indigo-400 font-bold text-xs tracking-tighter uppercase mb-4">Latest Innovation</span>
+                        <h3 class="text-2xl font-bold mb-4 italic underline decoration-indigo-500 underline-offset-8">School Management System</h3>
+                        <p class="text-slate-400 text-sm mb-8 flex-grow">A full-stack ERP for educational institutions. Handles admin panels, student logins, and complex fee management using Node.js & Sequelize.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] bg-slate-800 px-3 py-1 rounded-full text-indigo-300 border border-indigo-900/30 font-bold">NODE JS</span>
+                            <span class="text-[10px] bg-slate-800 px-3 py-1 rounded-full text-indigo-300 border border-indigo-900/30 font-bold">SEQUELIZE</span>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- MongoDB Skill -->
-            <div class="p-6 bg-white rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-                <i class="fas fa-database text-4xl text-green-700 mb-4"></i> <!-- Font Awesome MongoDB icon -->
-                <h3 class="text-xl font-semibold text-gray-700">MongoDB</h3>
-            </div>
+                <div class="bg-white rounded-[40px] p-10 border border-slate-100 card-hover transition-all" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-full flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4">E-commerce (Nityams)</h3>
+                        <p class="text-slate-500 text-sm mb-8 flex-grow">Architected core functionalities including user authentication, shopping cart logic, wishlist, and secure order processing.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] bg-indigo-50 px-3 py-1 rounded-full text-indigo-600 font-bold">HTML5 / TAILWIND</span>
+                            <span class="text-[10px] bg-indigo-50 px-3 py-1 rounded-full text-indigo-600 font-bold">MYSQL</span>
+                        </div>
+                        <a href="https://nityams.zuluitsolutions.com" target="_blank" class="text-indigo-600 font-black text-xs uppercase tracking-widest hover:translate-x-2 transition inline-block">Visit Live Project →</a>
+                    </div>
+                </div>
 
-            <!-- MySQL Skill -->
-            <div class="p-6 bg-white rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-                <i class="fa-sharp fa-solid fa-database text-4xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-semibold text-gray-700">MySQL</h3>
-            </div>
+                <div class="bg-white rounded-[40px] p-10 border border-slate-100 card-hover transition-all" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="h-full flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4">Singh Publication</h3>
+                        <p class="text-slate-500 text-sm mb-8 flex-grow">System rebuild with enhanced API performance. Focused on seamless product delivery and interactive user interfaces.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] bg-pink-50 px-3 py-1 rounded-full text-pink-600 font-bold">JAVASCRIPT</span>
+                            <span class="text-[10px] bg-pink-50 px-3 py-1 rounded-full text-pink-600 font-bold">NODE API</span>
+                        </div>
+                        <a href="https://singhpublication.zuluitsolutions.com" target="_blank" class="text-pink-600 font-black text-xs uppercase tracking-widest hover:translate-x-2 transition inline-block">Visit Live Project →</a>
+                    </div>
+                </div>
 
-            <!-- Git Skill -->
-            <div class="p-6 bg-white rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-                <i class="fab fa-git-square text-4xl text-red-600 mb-4"></i> <!-- Font Awesome Git icon -->
-                <h3 class="text-xl font-semibold text-gray-700">Git</h3>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-    
-
-    <!-- Company Projects Section -->
-    <section id="projects" class="bg-white py-12">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-bold mb-4 text-center underline cursor-pointer"> <span class="text-red-500">Company</span> Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-6 bg-gray-100 rounded shadow">
-                    <a href="https://nityams.zuluitsolutions.com">
-                    <h3 class="text-lg font-bold">E-commerce (Nityams)</h3>
-                    <img src="https://nityams.zuluitsolutions.com/images/Honor%20the%20promise%20of%20lifelong%20protection%20with%20our%20symbolic%20Rakhi%20designs.png" alt="Nityams Logo" class="w-32 h-32 mx-auto mb-4">
-                    <p class="mb-10">Built functionalities like login, add to cart, wishlist, and order creation using HTML, Tailwind CSS, Node.js, JavaScript, and MySQL.</p>
-                    <a href="https://nityams.zuluitsolutions.com" target="_blank" class=" text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Visit Project</a>
-                </a>
-            </div>
-                <div class="p-6 bg-gray-100 rounded shadow">
-                    <a href="https://singhpublication.zuluitsolutions.com">
-                    <h3 class="text-lg font-bold">E-commerce (Singh Publication)</h3>
-                    <img src="https://singhpublication.zuluitsolutions.com/IMG/about.42aa1a12ada679966f59.png   " alt="Singh Publication Logo" class="w-32 h-32 mx-auto mb-4">
-                     <p class="mb-10">Rebuilt the system with enhanced functionalities and created APIs using Node.js, MySQL, Tailwind CSS, and JavaScript.</p>
-                    <a href="https://singhpublication.zuluitsolutions.com" target="_blank" class=" text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" >Visit Project</a>
-                </a>
-            </div>
-                <div class="p-6 bg-gray-100 rounded shadow">
-                    <a href="https://rambiharipalace.com">
-                    <h3 class="text-lg font-bold">Hotel Management</h3>
-                    <img src="https://rambiharipalace.com/src/images/header_logo.png" alt="Hotel Management Logo" class="w-32 h-32 mx-auto mb-4">
-                    <p class="mb-10">Developed admin panel and room booking system with Node.js, MySQL, HTML, and Tailwind CSS.</p>
-                    <a href="https://rambiharipalace.com" target="_blank" class=" text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" >Visit Project</a>
+    <footer id="contact" class="bg-slate-900 text-white pt-32 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl font-black mb-8">Let's build the <span class="text-indigo-400">next big thing.</span></h2>
+                <div class="flex flex-col md:flex-row justify-center gap-6 mb-20">
+                    <a href="mailto:rameshjatav572004@gmail.com" class="bg-slate-800 p-6 rounded-3xl hover:bg-indigo-600 transition group">
+                        <i class="fas fa-envelope text-indigo-400 group-hover:text-white mb-3 text-xl"></i>
+                        <p class="text-sm font-bold">rameshjatav572004@gmail.com</p>
+                    </a>
+                    <a href="tel:+919024414017" class="bg-slate-800 p-6 rounded-3xl hover:bg-indigo-600 transition group">
+                        <i class="fas fa-phone-alt text-indigo-400 group-hover:text-white mb-3 text-xl"></i>
+                        <p class="text-sm font-bold">+91 9024414017</p>
                     </a>
                 </div>
                 
+                <div class="flex justify-center space-x-8 mb-20">
+                    <a href="https://github.com/rameshjatav" class="text-slate-500 hover:text-white text-3xl transition"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white text-3xl transition"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+                <div class="border-t border-slate-800 pt-10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-[10px] font-bold uppercase tracking-widest">
+                    <p>© 2026 AmiTech Solutions. Built by Ramesh Jatav.</p>
+                    <p class="mt-4 md:mt-0 italic">Optimized for Enterprise Performance</p>
+                </div>
             </div>
         </div>
-    </section>
+    </footer>
 
-<!-- MY PROJECTS  -->
-
-   <section id="projects" class="bg-white py-12">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-bold mb-4 text-center underline cursor-pointer"> <span class="text-red-500">My</span> Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-             <div class="p-6 bg-gray-100 rounded shadow">
-
-              <a href="https://expense-tracker-pi-plum.vercel.app">  
-                    <h3 class="text-lg font-bold">Expense-tracker</h3>
-                    <img src="https://expense-tracker-pi-plum.vercel.app/logo1.png" alt="Nityams Logo" class="w-32 h-32 mx-auto mb-4">
-                    <p class="mb-10">Expense Tracker — A personal finance management web app built with Node.js, Express.js, MySQL (Sequelize), HTML, CSS, and Tailwind CSS. Users can create accounts, add manual cash balances, record daily expenses and incomes with remarks, view transaction history, and track spending easily through an interactive, responsive interface.</p>
-                    <a href="https://expense-tracker-pi-plum.vercel.app" target="_blank" class=" text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Visit Project</a>
-              </a>
-             </div>
-            
-
-                
-            </div>
+    <div id="password-form" class="hidden fixed inset-0 z-[100] flex justify-center items-center bg-slate-900/95 backdrop-blur-md p-6">
+        <div class="bg-white p-12 rounded-[40px] shadow-2xl max-w-sm w-full text-center">
+            <h2 class="text-3xl font-black text-slate-900 mb-2 italic">SECURITY</h2>
+            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-8">Enter Captcha to Unlock CV</p>
+            <form onsubmit="return validateCaptcha(event)">
+                <canvas id="captchaCanvas" class="mx-auto rounded-2xl mb-4 bg-slate-50 border border-slate-100"></canvas>
+                <button type="button" onclick="generateCaptcha()" class="text-[10px] text-indigo-600 font-black hover:underline mb-8 uppercase tracking-widest">Refresh Code</button>
+                <input type="text" id="captcha-input" class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-2xl focus:border-indigo-600 outline-none transition mb-6 font-bold text-center" placeholder="CODE HERE" required>
+                <button type="submit" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black hover:bg-indigo-600 transition shadow-xl shadow-indigo-100 uppercase tracking-widest">Verify</button>
+            </form>
+            <button onclick="closePasswordForm()" class="mt-8 text-slate-400 text-[10px] font-bold hover:text-slate-900 uppercase tracking-widest">Cancel</button>
         </div>
-    </section>
+    </div>
 
-
-<!-- Contact Section -->
-    <section id="contact" class="bg-gray-100 py-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
-            <p>Email: <a href="mailto:rameshjatav572004@gmail.com" class="text-blue-500">rameshjatav572004@gmail.com</a></p>
-            <p>Mobile: <a href="tel:+919024414017" class="text-blue-500">9024414017</a></p>
-        </div>
-    </section>
-
-
-    
- <footer class="bg-gray-900 text-white p-4 text-center">
-        <p>&copy; 2024 Ramesh Jatav. All Rights Reserved.</p>
-        <img src="./logo_myportfolio.png" alt="" class="w-40 py-0 mt-0 mb-6 flex justify-center"> 
-        <a href="./RameshJatavResume.pdf" target="_blank" class=" text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">My Resume </a>
-
-        <a href="#" onclick="showPasswordForm()" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2  ">My CV</a>
-        <!-- <a href="./interviewQuestions.html" class=" text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2  "> i </a> -->
-        <p class="mt-8 text-red-400">If you want to see my CV then fill the capture code correctly..!</p>
-        <!-- <a href="./computer-guide.html" class=" text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2  "> PC i</a> -->
- </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Mobile navigation toggle
-        const navToggle = document.getElementById('nav-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        navToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
-    <!-- <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Ramesh Jatav",
-          "url": "https://rameshjatav.github.io/portfolioWeb/",
-          "description": "Backend developer with experience in Node.js, MySQL, MongoDB, and web development technologies.",
-          "jobTitle": "Backend Developer",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "Self-Employed"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/rameshjatav",
-            "https://github.com/rameshjatav"
-          ]
-        }
-        </script> -->
-<script type="application/ld+json">
- {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ramesh Jatav",
-  "jobTitle": "Backend Developer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "KashishIndia"
-  },
-  "url": "https://portfolio-web-six-mu.vercel.app",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Alwar",
-    "addressCountry": "India"
-  },
-  "sameAs": [
-    "https://github.dev/RameshJatav",
-    "https://www.linkedin.com/pub/dir/Ramesh/Jatav"
-  ]
-}
-</script>
+        AOS.init({ duration: 1000, once: true });
 
-        
+        let captchaText = "";
+        function generateCaptcha() {
+            const canvas = document.getElementById('captchaCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 200; canvas.height = 80;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.font = 'bold 32px Arial';
+            ctx.fillStyle = '#1e293b';
+            ctx.textAlign = 'center';
+            captchaText = Math.random().toString(36).substring(2, 7).toUpperCase();
+            ctx.fillText(captchaText, 100, 50);
+            for(let i=0; i<5; i++) {
+                ctx.strokeStyle = '#e2e8f0';
+                ctx.beginPath(); ctx.moveTo(Math.random()*200, Math.random()*80);
+                ctx.lineTo(Math.random()*200, Math.random()*80); ctx.stroke();
+            }
+        }
+
+        function showPasswordForm() {
+            document.getElementById('password-form').classList.remove('hidden');
+            generateCaptcha();
+        }
+
+        function closePasswordForm() {
+            document.getElementById('password-form').classList.add('hidden');
+        }
+
+        function validateCaptcha(event) {
+            event.preventDefault();
+            const input = document.getElementById('captcha-input').value.trim().toUpperCase();
+            if (input === captchaText) {
+                sessionStorage.setItem('authenticated', 'true');
+                window.location.href = './portfolio_cv.html';
+            } else {
+                alert('Security check failed. Try again.');
+                generateCaptcha();
+            }
+        }
+    </script>
 </body>
 </html>
