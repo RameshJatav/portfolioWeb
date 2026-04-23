@@ -1,229 +1,193 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh Jatav | AMITECH IT Solutions</title>
     
-    <title>Ramesh Jatav | Expert Backend Developer & IT Consultant | Alwar</title>
-    <meta name="description" content="Portfolio of Ramesh Jatav - Senior Backend Developer specializing in Node.js, SAP Operations, and Full-stack IT Solutions. Founder of AmiTech Solutions.">
-    <meta name="keywords" content="Ramesh Jatav, AmiTech Solutions, KashishIndia Pvt Ltd, Backend Developer Alwar, Node.js Expert, SAP Specialist, School Management System, IT Company Alwar">
+    <meta name="description" content="Ramesh Jatav - Founder of AMITECH IT Solutions. Specialist in Node.js, SAP, and Full Stack Development.">
     <meta name="author" content="Ramesh Jatav">
-    <meta name="robots" content="index, follow">
-
-    <link rel="canonical" href="https://portfolio-web-six-mu.vercel.app/">
-
+    
+    <link rel="icon" href="./logo_myportfolio.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #2dd4bf; border-radius: 10px; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            transition: all 0.4s ease;
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-        }
-        .text-gradient {
-            background: linear-gradient(90deg, #4f46e5, #9333ea);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
+
+        .heading-font { font-family: "Orbitron", sans-serif; }
+
+        /* Dark Mode (Default) */
+        body.dark-mode { background-color: #0f0f1b; color: #f0f0f0; }
+        .dark-mode .card { background-color: #1a1a2e; border: 1px solid rgba(45, 212, 191, 0.3); }
+        .dark-mode .nav-bg { background-color: rgba(15, 15, 27, 0.8); border-bottom: 1px solid rgba(45, 212, 191, 0.2); }
+        .dark-mode .glow-text { text-shadow: 0 0 10px #2dd4bf; color: #2dd4bf; }
+
+        /* Light Mode Styling (Modern & Clean) */
+        body.light-mode { background-color: #f8fafc; color: #1e293b; }
+        .light-mode .card { background-color: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .light-mode .nav-bg { background-color: rgba(255, 255, 255, 0.9); border-bottom: 1px solid #e2e8f0; }
+        .light-mode .glow-text { color: #0d9488; text-shadow: none; }
+        .light-mode .text-cyan-400 { color: #0d9488; }
+        .light-mode .bg-gray-800, .light-mode .bg-gray-900 { background-color: #ffffff; }
+
+        .bounce-slow { animation: bounce 3s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(-5%); } 50% { transform: none; } }
+
+        .project-card:hover { transform: scale(1.03); transition: 0.3s; }
     </style>
 </head>
+<body class="dark-mode overflow-x-hidden">
 
-<body class="bg-slate-50 text-slate-900 font-sans selection:bg-purple-100 selection:text-purple-700">
-
-    <header class="glass-nav fixed top-0 w-full z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="gradient-bg p-2 rounded-lg shadow-lg">
-                    <span class="text-white font-bold">RJ</span>
-                </div>
-                <span class="text-xl font-black tracking-tight text-slate-800">AMITECH SOLUTIONS</span>
+    <header class="fixed top-0 left-0 w-full z-50 nav-bg backdrop-blur-md p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-teal-500 rounded flex items-center justify-center shadow-lg">
+                <span class="text-white font-bold text-xl heading-font">A</span>
             </div>
-            <nav class="hidden md:flex space-x-8 font-bold text-xs tracking-widest text-slate-500 uppercase">
-                <a href="#about" class="hover:text-indigo-600 transition">About</a>
-                <a href="#experience" class="hover:text-indigo-600 transition">Experience</a>
-                <a href="#projects" class="hover:text-indigo-600 transition">Portfolio</a>
-                <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
-            </nav>
-            <button onclick="showPasswordForm()" class="bg-slate-900 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-indigo-600 transition-all shadow-md">
-                DOWNLOAD CV
-            </button>
+            <h1 class="text-xl glow-text font-bold heading-font hidden md:block">AMITECH IT SOLUTIONS</h1>
         </div>
+        <nav class="space-x-6 flex items-center">
+            <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest">
+                <a href="#about" class="hover:text-teal-400 transition">About</a>
+                <a href="#experience" class="hover:text-teal-400 transition">Experience</a>
+                <a href="#projects" class="hover:text-teal-400 transition">Projects</a>
+            </div>
+            <button onclick="toggleTheme()" class="text-xl hover:text-teal-500 transition px-2"><i class="fas fa-moon" id="themeIcon"></i></button>
+            <a href="#" onclick="showPasswordForm()" class="bg-teal-500 text-white px-4 py-1.5 rounded-full font-bold text-xs shadow-md">MY CV</a>
+        </nav>
     </header>
 
-    <section class="pt-48 pb-32 bg-white relative overflow-hidden">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
-            <div class="md:w-3/5 animate__animated animate__fadeInLeft">
-                <h2 class="text-indigo-600 font-bold mb-4 tracking-widest text-sm">BACKEND ARCHITECT & SAP SPECIALIST</h2>
-                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-none text-slate-900">
-                    Ramesh <br><span class="text-gradient">Jatav.</span>
-                </h1>
-                <p class="text-xl text-slate-500 mb-10 max-w-xl leading-relaxed">
-                    Founder of <strong>AmiTech Solutions</strong>. Expert in building scalable server-side systems, secure APIs, and managing enterprise SAP operations.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#projects" class="bg-indigo-600 text-white px-10 py-4 rounded-2xl font-bold hover:bg-indigo-700 transition shadow-xl shadow-indigo-200">View Projects</a>
-                    <a href="#contact" class="border-2 border-slate-200 text-slate-800 px-10 py-4 rounded-2xl font-bold hover:border-indigo-600 hover:text-indigo-600 transition">Contact Me</a>
-                </div>
+    <section class="h-screen flex items-center justify-center relative text-center px-6">
+        <div class="z-10" data-aos="fade-up">
+            <h2 class="heading-font text-teal-500 tracking-[8px] text-xs mb-4 uppercase">Innovative Development Hub</h2>
+            <h1 class="text-5xl md:text-8xl font-black heading-font mb-6 bounce-slow">RAMESH <span class="glow-text">JATAV</span></h1>
+            <p class="text-lg md:text-2xl opacity-70 max-w-3xl mx-auto mb-10">We build high-performance Full-Stack Web, Android, and industrial SAP solutions under <strong>AMITECH IT SOLUTIONS</strong>.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="bg-teal-500 text-white px-10 py-4 rounded-xl font-bold shadow-lg hover:bg-teal-600 transition">View Portfolio</a>
+                <a href="#contact" class="border-2 border-teal-500 text-teal-500 px-10 py-4 rounded-xl font-bold hover:bg-teal-500 hover:text-white transition">Hire Us</a>
             </div>
-            <div class="md:w-2/5 mt-20 md:mt-0 animate__animated animate__zoomIn">
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-16" data-aos="fade-right">
+            <div class="md:w-1/3">
                 <div class="relative">
-                    <img src="./aboutimg.jpg" alt="Ramesh Jatav" class="w-80 h-96 md:w-[400px] md:h-[500px] object-cover rounded-[40px] shadow-2xl grayscale hover:grayscale-0 transition duration-700 mx-auto">
-                    <div class="absolute -bottom-10 -right-5 bg-white p-8 rounded-3xl shadow-2xl border border-slate-50 hidden md:block">
-                        <p class="text-4xl font-black text-indigo-600">2.5+</p>
-                        <p class="text-slate-400 font-bold text-xs uppercase">Years Experience</p>
+                    <img src="./aboutimg.jpg" alt="Ramesh Jatav" class="w-full rounded-[40px] shadow-2xl border-4 border-teal-500/20">
+                    <div class="absolute -bottom-6 -left-6 bg-teal-500 p-6 rounded-2xl shadow-xl hidden md:block">
+                        <p class="text-white font-bold text-xs uppercase tracking-widest">Founder</p>
+                        <p class="text-white font-black text-xl heading-font">AMITECH</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-2/3 space-y-6">
+                <h3 class="text-4xl font-bold heading-font glow-text">About Me</h3>
+                <p class="text-xl leading-relaxed">I am <span class="text-teal-500 font-bold">Ramesh Jatav</span>, a Full-Stack Architect from Alwar. I specialize in Node.js, PHP Laravel, and Native Android Development.</p>
+                <p class="opacity-70 text-lg">My professional journey is built on delivering high-frequency systems, including the <strong>Airtel Distributor Portal</strong> (KashishIndia) and current industrial operations at <strong>Ashok Leyland</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-8 bg-gray-50 dark:bg-black/20 transition-colors">
+        <h3 class="text-3xl text-center heading-font glow-text font-bold mb-16 uppercase">Professional Journey</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="card p-8 rounded-3xl" data-aos="fade-up">
+                <span class="text-teal-500 font-bold text-xs">2025 – PRESENT</span>
+                <h4 class="text-xl font-bold mt-2 heading-font uppercase">Ashok Leyland</h4>
+                <p class="text-sm italic opacity-70 mb-4">DEO Specialist - SAP Operations</p>
+                <p class="text-sm">Managing material vehicle invoices, GRN generation, and enterprise logistics via SAP and Outlook.</p>
+            </div>
+            <div class="card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <span class="text-teal-500 font-bold text-xs">6-MONTH CONTRACT</span>
+                <h4 class="text-xl font-bold mt-2 heading-font uppercase">KashishIndia</h4>
+                <p class="text-sm italic opacity-70 mb-4">Airtel Distributor Project</p>
+                <p class="text-sm">Architected and fully developed the Airtel Distributor portal backend using Node.js & MySQL (Sequelize).</p>
+            </div>
+            <div class="card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                <span class="text-teal-500 font-bold text-xs">2023 – 2024</span>
+                <h4 class="text-xl font-bold mt-2 heading-font uppercase">Zulu IT Solutions</h4>
+                <p class="text-sm italic opacity-70 mb-4">Backend Developer</p>
+                <p class="text-sm">Developed secure REST APIs and database structures for multi-vendor E-commerce platforms.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6">
+        <div class="container mx-auto">
+            <h3 class="text-3xl text-center heading-font glow-text font-bold mb-16 uppercase">Company Portfolio</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="card rounded-[35px] overflow-hidden project-card" data-aos="zoom-in">
+                    <img src="https://nityams.zuluitsolutions.com/images/Honor%20the%20promise%20of%20lifelong%20protection%20with%20our%20symbolic%20Rakhi%20designs.png" class="w-full h-48 object-cover">
+                    <div class="p-8">
+                        <h4 class="text-xl font-bold mb-3">Nityams E-commerce</h4>
+                        <p class="text-sm opacity-60 mb-6">Built cart functionalities, user auth, and order creation systems.</p>
+                        <a href="https://nityams.zuluitsolutions.com" target="_blank" class="text-teal-500 font-bold uppercase text-xs tracking-widest">Live Project →</a>
+                    </div>
+                </div>
+                <div class="card rounded-[35px] overflow-hidden project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://singhpublication.zuluitsolutions.com/IMG/about.42aa1a12ada679966f59.png" class="w-full h-48 object-cover">
+                    <div class="p-8">
+                        <h4 class="text-xl font-bold mb-3">Singh Publication</h4>
+                        <p class="text-sm opacity-60 mb-6">Enhanced system performance and rebuilt backend API architecture.</p>
+                        <a href="https://singhpublication.zuluitsolutions.com" target="_blank" class="text-teal-500 font-bold uppercase text-xs tracking-widest">Live Project →</a>
+                    </div>
+                </div>
+                <div class="card rounded-[35px] overflow-hidden project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://rambiharipalace.com/src/images/header_logo.png" class="w-full h-48 object-contain bg-white p-4">
+                    <div class="p-8">
+                        <h4 class="text-xl font-bold mb-3">Rambihari Palace</h4>
+                        <p class="text-sm opacity-60 mb-6">Developed Hotel Admin Panel and Room Booking system with Node.js.</p>
+                        <a href="https://rambiharipalace.com" target="_blank" class="text-teal-500 font-bold uppercase text-xs tracking-widest">Live Project →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 bg-slate-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-20">Work History</h2>
-            <div class="max-w-4xl mx-auto space-y-12">
-                
-                <div class="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 card-hover transition-all" data-aos="fade-up">
-                    <div class="md:w-1/4">
-                        <span class="text-indigo-600 font-black text-sm uppercase tracking-widest">Sep 2025 – Present</span>
-                        <h4 class="text-slate-400 font-bold text-xs mt-2">ASHOK LEYLAND</h4>
-                    </div>
-                    <div class="md:w-3/4">
-                        <h3 class="text-2xl font-bold mb-3">Data Entry Operations Specialist (SAP)</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4 italic">Vishwa Buses and Coaches Alwar</p>
-                        <p class="text-slate-500 leading-relaxed">
-                            Managing high-volume material vehicle invoices and GRN generation within the "SAP ERP" environment. Utilizing advanced Excel and Outlook for enterprise-level logistics and communication.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 card-hover transition-all" data-aos="fade-up">
-                    <div class="md:w-1/4">
-                        <span class="text-pink-600 font-black text-sm uppercase tracking-widest">6-Month Contract</span>
-                        <h4 class="text-slate-400 font-bold text-xs mt-2">KASHISHINDIA PVT LTD</h4>
-                    </div>
-                    <div class="md:w-3/4">
-                        <h3 class="text-2xl font-bold mb-3">Backend Developer (Dedicated Project)</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4 font-bold">Project: Airtel Distributor Portal</p>
-                        <p class="text-slate-500 leading-relaxed">
-                            Exclusively hired for the end-to-end development of the "Airtel Distributor System". Architected the backend using "Node.js" and "MySQL with Sequelize ORM". Delivered a fully functional, secure portal for high-frequency distribution transactions.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-10 rounded-[32px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 card-hover transition-all" data-aos="fade-up">
-                    <div class="md:w-1/4">
-                        <span class="text-slate-400 font-black text-sm uppercase tracking-widest">Aug 2023 – Nov 2024</span>
-                        <h4 class="text-slate-400 font-bold text-xs mt-2">ZULU IT SOLUTIONS</h4>
-                    </div>
-                    <div class="md:w-3/4">
-                        <h3 class="text-2xl font-bold mb-3">Backend Developer</h3>
-                        <p class="text-slate-500 leading-relaxed">
-                            Built robust RESTful APIs with Node.js, JWT, and MongoDB/MySQL for diverse e-commerce and hotel management solutions.
-                        </p>
-                    </div>
-                </div>
-
+    <section class="py-24 px-8 bg-teal-500 text-white rounded-[60px] mx-4 mb-20 shadow-2xl">
+        <h3 class="text-3xl text-center font-black heading-font mb-16">AMITECH Systems</h3>
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div class="bg-white/10 p-10 rounded-[40px] border border-white/20 backdrop-blur-lg">
+                <h4 class="text-2xl font-bold heading-font mb-4">School Management ERP</h4>
+                <p class="font-light opacity-90 mb-6 italic text-sm">Full institutional management system with student login, fee tracking, and results generation. Built with Node.js & Sequelize.</p>
+                <span class="text-[10px] font-bold bg-white text-teal-600 px-3 py-1 rounded-full uppercase">Enterprise Solution</span>
+            </div>
+            <div class="bg-white/10 p-10 rounded-[40px] border border-white/20 backdrop-blur-lg">
+                <h4 class="text-2xl font-bold heading-font mb-4">Expense Tracker</h4>
+                <p class="font-light opacity-90 mb-6 italic text-sm">Personal finance app featuring daily spending analytics and wallet management. Built for high performance.</p>
+                <a href="https://expense-tracker-pi-plum.vercel.app" target="_blank" class="text-white font-bold underline">Launch Web App →</a>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-6">Professional <span class="text-indigo-600">Portfolio</span></h2>
-            <p class="text-center text-slate-400 mb-20 max-w-2xl mx-auto font-medium">From corporate enterprise solutions to personal innovative projects.</p>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
-                <div class="group bg-slate-900 rounded-[40px] p-10 text-white card-hover transition-all" data-aos="zoom-in">
-                    <div class="h-full flex flex-col">
-                        <span class="text-indigo-400 font-bold text-xs tracking-tighter uppercase mb-4">Latest Innovation</span>
-                        <h3 class="text-2xl font-bold mb-4 italic underline decoration-indigo-500 underline-offset-8">School Management System</h3>
-                        <p class="text-slate-400 text-sm mb-8 flex-grow">A full-stack ERP for educational institutions. Handles admin panels, student logins, and complex fee management using Node.js & Sequelize.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-[10px] bg-slate-800 px-3 py-1 rounded-full text-indigo-300 border border-indigo-900/30 font-bold">NODE JS</span>
-                            <span class="text-[10px] bg-slate-800 px-3 py-1 rounded-full text-indigo-300 border border-indigo-900/30 font-bold">SEQUELIZE</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-[40px] p-10 border border-slate-100 card-hover transition-all" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="h-full flex flex-col">
-                        <h3 class="text-2xl font-bold mb-4">E-commerce (Nityams)</h3>
-                        <p class="text-slate-500 text-sm mb-8 flex-grow">Architected core functionalities including user authentication, shopping cart logic, wishlist, and secure order processing.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-[10px] bg-indigo-50 px-3 py-1 rounded-full text-indigo-600 font-bold">HTML5 / TAILWIND</span>
-                            <span class="text-[10px] bg-indigo-50 px-3 py-1 rounded-full text-indigo-600 font-bold">MYSQL</span>
-                        </div>
-                        <a href="https://nityams.zuluitsolutions.com" target="_blank" class="text-indigo-600 font-black text-xs uppercase tracking-widest hover:translate-x-2 transition inline-block">Visit Live Project →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-[40px] p-10 border border-slate-100 card-hover transition-all" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="h-full flex flex-col">
-                        <h3 class="text-2xl font-bold mb-4">Singh Publication</h3>
-                        <p class="text-slate-500 text-sm mb-8 flex-grow">System rebuild with enhanced API performance. Focused on seamless product delivery and interactive user interfaces.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-[10px] bg-pink-50 px-3 py-1 rounded-full text-pink-600 font-bold">JAVASCRIPT</span>
-                            <span class="text-[10px] bg-pink-50 px-3 py-1 rounded-full text-pink-600 font-bold">NODE API</span>
-                        </div>
-                        <a href="https://singhpublication.zuluitsolutions.com" target="_blank" class="text-pink-600 font-black text-xs uppercase tracking-widest hover:translate-x-2 transition inline-block">Visit Live Project →</a>
-                    </div>
-                </div>
-
-            </div>
+    <footer id="contact" class="py-24 text-center border-t border-gray-200 dark:border-white/10">
+        <h3 class="text-4xl font-bold heading-font glow-text mb-12">Get In Touch</h3>
+        <div class="flex justify-center space-x-12 mb-16 text-3xl">
+            <a href="http://github.com/rameshjatav" class="hover:text-teal-500 transition"><i class="fab fa-github"></i></a>
+            <a href="https://in.linkedin.com/in/ramesh-jatav-150328266" class="hover:text-teal-500 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:rameshjatav572004@gmail.com" class="hover:text-teal-500 transition"><i class="fas fa-envelope"></i></a>
         </div>
-    </section>
-
-    <footer id="contact" class="bg-slate-900 text-white pt-32 pb-12">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-5xl font-black mb-8">Let's build the <span class="text-indigo-400">next big thing.</span></h2>
-                <div class="flex flex-col md:flex-row justify-center gap-6 mb-20">
-                    <a href="mailto:rameshjatav572004@gmail.com" class="bg-slate-800 p-6 rounded-3xl hover:bg-indigo-600 transition group">
-                        <i class="fas fa-envelope text-indigo-400 group-hover:text-white mb-3 text-xl"></i>
-                        <p class="text-sm font-bold">rameshjatav572004@gmail.com</p>
-                    </a>
-                    <a href="tel:+919024414017" class="bg-slate-800 p-6 rounded-3xl hover:bg-indigo-600 transition group">
-                        <i class="fas fa-phone-alt text-indigo-400 group-hover:text-white mb-3 text-xl"></i>
-                        <p class="text-sm font-bold">+91 9024414017</p>
-                    </a>
-                </div>
-                
-                <div class="flex justify-center space-x-8 mb-20">
-                    <a href="https://github.com/rameshjatav" class="text-slate-500 hover:text-white text-3xl transition"><i class="fab fa-github"></i></a>
-                    <a href="#" class="text-slate-500 hover:text-white text-3xl transition"><i class="fab fa-linkedin"></i></a>
-                </div>
-
-                <div class="border-t border-slate-800 pt-10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-[10px] font-bold uppercase tracking-widest">
-                    <p>© 2026 AmiTech Solutions. Built by Ramesh Jatav.</p>
-                    <p class="mt-4 md:mt-0 italic">Optimized for Enterprise Performance</p>
-                </div>
-            </div>
-        </div>
+        <p class="text-[10px] uppercase tracking-[8px] opacity-40 font-bold">© 2026 AMITECH IT SOLUTIONS | ALWAR</p>
     </footer>
 
-    <div id="password-form" class="hidden fixed inset-0 z-[100] flex justify-center items-center bg-slate-900/95 backdrop-blur-md p-6">
-        <div class="bg-white p-12 rounded-[40px] shadow-2xl max-w-sm w-full text-center">
-            <h2 class="text-3xl font-black text-slate-900 mb-2 italic">SECURITY</h2>
-            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-8">Enter Captcha to Unlock CV</p>
-            <form onsubmit="return validateCaptcha(event)">
-                <canvas id="captchaCanvas" class="mx-auto rounded-2xl mb-4 bg-slate-50 border border-slate-100"></canvas>
-                <button type="button" onclick="generateCaptcha()" class="text-[10px] text-indigo-600 font-black hover:underline mb-8 uppercase tracking-widest">Refresh Code</button>
-                <input type="text" id="captcha-input" class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-2xl focus:border-indigo-600 outline-none transition mb-6 font-bold text-center" placeholder="CODE HERE" required>
-                <button type="submit" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black hover:bg-indigo-600 transition shadow-xl shadow-indigo-100 uppercase tracking-widest">Verify</button>
-            </form>
-            <button onclick="closePasswordForm()" class="mt-8 text-slate-400 text-[10px] font-bold hover:text-slate-900 uppercase tracking-widest">Cancel</button>
+    <div id="password-form" class="hidden fixed inset-0 z-[100] flex justify-center items-center bg-black/90 backdrop-blur-md">
+        <div class="bg-white p-10 rounded-[40px] shadow-2xl max-w-sm w-full text-center text-black">
+            <h2 class="heading-font text-xl font-bold mb-4 uppercase">Security Check</h2>
+            <canvas id="captchaCanvas" class="mx-auto border border-gray-100 rounded-xl mb-4"></canvas>
+            <button type="button" onclick="generateCaptcha()" class="text-[10px] text-teal-600 font-bold hover:underline mb-6 block mx-auto uppercase">Refresh</button>
+            <input type="text" id="captcha-input" class="w-full bg-gray-50 border-2 border-gray-100 p-4 rounded-3xl focus:border-teal-500 outline-none transition mb-6 font-bold text-center" placeholder="ENTER CODE">
+            <button onclick="validateCaptcha(event)" class="w-full bg-black text-white py-4 rounded-3xl font-bold hover:bg-teal-500 transition">VERIFY</button>
         </div>
     </div>
 
@@ -231,43 +195,40 @@
     <script>
         AOS.init({ duration: 1000, once: true });
 
+        // Theme Toggle Logic
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.getElementById('themeIcon');
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+            
+            if(body.classList.contains('light-mode')) {
+                icon.className = 'fas fa-sun';
+            } else {
+                icon.className = 'fas fa-moon';
+            }
+        }
+
+        // Captcha Logic
         let captchaText = "";
         function generateCaptcha() {
             const canvas = document.getElementById('captchaCanvas');
             const ctx = canvas.getContext('2d');
-            canvas.width = 200; canvas.height = 80;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.font = 'bold 32px Arial';
-            ctx.fillStyle = '#1e293b';
+            canvas.width = 180; canvas.height = 60;
+            ctx.clearRect(0, 0, 180, 60);
+            ctx.font = 'bold 30px Orbitron';
+            ctx.fillStyle = '#0f172a';
             ctx.textAlign = 'center';
             captchaText = Math.random().toString(36).substring(2, 7).toUpperCase();
-            ctx.fillText(captchaText, 100, 50);
-            for(let i=0; i<5; i++) {
-                ctx.strokeStyle = '#e2e8f0';
-                ctx.beginPath(); ctx.moveTo(Math.random()*200, Math.random()*80);
-                ctx.lineTo(Math.random()*200, Math.random()*80); ctx.stroke();
-            }
+            ctx.fillText(captchaText, 90, 42);
         }
-
-        function showPasswordForm() {
-            document.getElementById('password-form').classList.remove('hidden');
-            generateCaptcha();
-        }
-
-        function closePasswordForm() {
-            document.getElementById('password-form').classList.add('hidden');
-        }
-
-        function validateCaptcha(event) {
-            event.preventDefault();
+        function showPasswordForm() { document.getElementById('password-form').classList.remove('hidden'); generateCaptcha(); }
+        function validateCaptcha(e) {
             const input = document.getElementById('captcha-input').value.trim().toUpperCase();
-            if (input === captchaText) {
+            if (input === captchaText) { 
                 sessionStorage.setItem('authenticated', 'true');
                 window.location.href = './portfolio_cv.html';
-            } else {
-                alert('Security check failed. Try again.');
-                generateCaptcha();
-            }
+            } else { alert('Wrong Code!'); generateCaptcha(); }
         }
     </script>
 </body>
